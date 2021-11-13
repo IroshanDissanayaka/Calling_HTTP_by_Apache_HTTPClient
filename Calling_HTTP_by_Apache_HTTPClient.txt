@@ -47,8 +47,11 @@ public class CallingToGatewayAPI {
                     .setScheme("http")
                     .setHost(newurl).build();
             
-            // HTTP Get Object
+            // Using HTTP Get method
             HttpGet httpget = new HttpGet(uri);
+            // Or
+            // Using HTTP Post method
+            HttpGet httpget = new HttpPost(uri);
             
             // Execute(Send) and get responce
             HttpResponse response = client.execute(httpget);
